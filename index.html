@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instagram Grid</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .square-img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar bg-light">
+    <div class="container-fluid">
+     <div class="d-flex align-items-center">
+  <i class="fa-brands fa-instagram me-2"></i>
+  <a class="navbar-brand m-0" href="#" style="color: black;">Instagram</a>
+</div>
+
+      <div class="d-flex ms-auto align-items-center gap-2">
+        <!-- Modal Trigger -->
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Create new post
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      Caption:<div class="input-group">
+  <textarea class="form-control" aria-label="With textarea"></textarea>
+</div>
+<i class="fa-solid fa-camera" style="text-align: start;"></i>
+  <i class="fa-solid fa-location-dot" style="text-align: start;"></i>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Publish</button>
+      </div>
+    </div>
+  </div>
+</div>
+        
+
+        <!-- Dropdown -->
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          ><i class="fa-solid fa-gear"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+            <li><a class="dropdown-item" href="#">Privacy & Data</a></li>
+            <li><a class="dropdown-item" href="#" style="color: red;"> Log Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">Modal content here...</div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <ul
+    class="nav nav-pills my-3 justify-content-center"
+    id="pills-tab"
+    role="tablist"
+  >
+    <li class="nav-item" role="presentation">
+      <button
+        class="btn btn-outline-primary-sm"
+        id="pills-home-tab"
+        data-bs-toggle="pill"
+        data-bs-target="#pills-home"
+        type="button"
+        role="tab"
+        aria-controls="pills-home"
+        aria-selected="true"
+      >
+      <!-- GRID  -->
+       <i class="fa-solid fa-table-cells"></i>
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="btn btn-outline-primary-sm"
+        id="pills-profile-tab"
+        data-bs-toggle="pill"
+        data-bs-target="#pills-profile"
+        type="button"
+        role="tab"
+        aria-controls="pills-profile"
+        aria-selected="false"
+      >
+        <i class="fa-solid fa-square"></i>
+      </button>
+    </li>
+  </ul>
+
+  <!-- Tab Content Wrapper -->
+  <div class="tab-content" id="pills-tabContent">
+    <!-- Grid Tab -->
+    <div
+      class="tab-pane fade show active"
+      id="pills-home"
+      role="tabpanel"
+      aria-labelledby="pills-home-tab"
+    >
+      <div class="container px-4">
+        <div class="row g-4">
+          <!-- Image Cards 3 per row -->
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+                class="card-img-top square-img"
+                alt="Post Image"
+              />
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+                class="card-img-top square-img"
+                alt="Post Image"
+              />
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+                class="card-img-top square-img"
+                alt="Post Image"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+                class="card-img-top square-img"
+                alt="Post Image"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+                class="card-img-top square-img"
+                alt="Post Image"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+                class="card-img-top square-img"
+                alt="Post Image"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+                class="card-img-top square-img"
+                alt="Post Image"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+                class="card-img-top square-img"
+                alt="Post Image"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+                class="card-img-top square-img"
+                alt="Post Image"
+              />
+            </div>
+          </div>
+
+          <!-- Additional cards -->
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+                class="card-img-top square-img"
+                alt="Post Image"
+              />
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+                class="card-img-top square-img"
+                alt="Post Image"
+              />
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+                class="card-img-top square-img"
+                alt="Post Image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feed Tab -->
+    <div
+      class="tab-pane fade"
+      id="pills-profile"
+      role="tabpanel"
+      aria-labelledby="pills-profile-tab"
+    >
+      <div class="d-flex flex-column align-items-center gap-3 py-4 px-4">
+        <!-- Repeat cards with header and body -->
+        <div class="card" style="width: 30rem;">
+          <div class="card-header">Featured</div>
+          <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+            class="card-img-top"
+            alt="Post Image"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the bulk of
+              the card’s content.
+            </p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 30rem;">
+          <div class="card-header">Featured</div>
+          <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+            class="card-img-top"
+            alt="Post Image"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the bulk of
+              the card’s content.
+            </p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 30rem;">
+          <div class="card-header">Featured</div>
+          <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+            class="card-img-top"
+            alt="Post Image"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the bulk of
+              the card’s content.
+            </p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 30rem;">
+          <div class="card-header">Featured</div>
+          <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+            class="card-img-top"
+            alt="Post Image"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the bulk of
+              the card’s content.
+            </p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 30rem;">
+          <div class="card-header">Featured</div>
+          <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+            class="card-img-top"
+            alt="Post Image"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the bulk of
+              the card’s content.
+            </p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 30rem;">
+          <div class="card-header">Featured</div>
+          <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+            class="card-img-top"
+            alt="Post Image"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the bulk of
+              the card’s content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
